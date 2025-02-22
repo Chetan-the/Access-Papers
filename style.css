@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    margin: 0;
+    background-color: #000;
+    color: #eee;
+    font-family: Poppins;
+    font-size: 12px;
+    margin-top: 0px;
+
+}
+
+.container{
+    padding-top: 0px;
+}
+header {
+    margin-top: 0;
+    background-color: #5927e5;
+    /* color: #fff; */
+    padding: 0px 15px;
+    box-shadow: 7px 5px 30px rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 60px; /* Reduced height of the logo */
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+nav {
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px; /* Reduced the gap between menu items */
+    justify-content: right;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    color: whitesmoke;
+    font-size: 14px; /* Smaller font size for the links */
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: #fff; /* Optional: Change color on hover */
+}
+
+.carousel{
+    height: 100vh;
+    margin-top: 0px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 45%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+.carousel .list .item .author{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .topic{
+    color: #f1683a;
+}
+/* General Button Styling for Both Buttons Inside Anchor Tags and Outside */
+.carousel .list .item .buttons button,
+.carousel .list .item .buttons a button {
+    border: none;
+    background-color: #107299b6;
+    letter-spacing: 2px;
+    font-family: Poppins;
+    font-weight: 500;
+    width: 240px; /* Fixed width to align both sets of buttons */
+    height: 40px; /* Set height to match */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .list .item .buttons a button {
+    /* Apply styles to the button inside anchor tags */
+    background-color: #eee;
+}
+/* General Styling for Buttons */
+.btn {
+    transition: all 0.3s ease;  /* Smooth transition for hover and focus */
+    border-radius: 8px;         /* Rounded corners for a smoother look */
+    font-weight: bold;          /* Bold text for better readability */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Primary button background color */
+    border-color: #007bff;     /* Border color to match the background */
+}
+
+.btn-outline-secondary {
+    color: #6c757d;            /* Text color for the outline button */
+    border-color: #6c757d;     /* Border color for the outline button */
+}
+
+.btn-primary:hover, .btn-outline-secondary:hover {
+    opacity: 0.9;              /* Slight transparency on hover */
+}
+
+.btn-primary:focus, .btn-outline-secondary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Focus ring with primary color */
+}
+
+/* Button Layout and Spacing */
+.buttons {
+    margin-top: 20px;           /* Adds some top space for the buttons */
+}
+
+.buttons a {
+    text-decoration: none;      /* Removes the underline from links */
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 767px) {
+    .btn {
+        width: 100%;  /* Make buttons full width on mobile */
+    }
+}
+
+@media (min-width: 768px) {
+    .btn {
+        width: auto;  /* Auto width on larger screens (desktop, tablet) */
+    }
+}
+
+
+.carousel .list .item .buttons a button:nth-child(2) {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+
+.carousel .list .item .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 240px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+    
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.thumbnail .item .content{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title{
+    font-weight: 500;
+}
+.thumbnail .item .content .description{
+    font-weight: 200;
+
+}
+
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1.0s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1.5s!important;
+}
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img{
+    z-index: 100;
+}
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+
+.carousel .time{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
+    top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+    animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime{
+    from{ width: 100%}
+    to{width: 0}
+}
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+    .carousel .list .item .content .title{
+        font-size: 30px;
+    }
+}
+/* -------------------------------
+   Button Styles
+---------------------------------*/
+/* Override for both Access Papers and Home Page buttons */
+.btn-primary,
+.btn-outline-secondary,
+button.btn {
+  position: relative; /* For pseudo-element animations */
+  overflow: hidden;
+  background-color: #f1683a !important;
+  color: #fff !important;
+  border: none !important;
+  /* Establish a 3D space for transformation */
+  transform: perspective(1000px);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+              box-shadow 0.4s ease;
+  animation: buttonFadeIn 0.8s ease forwards, buttonPulse 3s infinite;
+}
+
+/* Hover effect: scale up, tilt, and add depth with a 3D effect */
+.btn-primary:hover,
+.btn-outline-secondary:hover,
+button.btn:hover {
+  transform: perspective(1000px) scale(1.15) rotateX(5deg) translateZ(10px);
+  box-shadow: 0 15px 30px rgba(241, 104, 58, 0.5);
+}
+
+/* Active state: slightly shrink for a tactile press effect */
+.btn-primary:active,
+.btn-outline-secondary:active,
+button.btn:active {
+  transform: perspective(1000px) scale(0.95);
+  box-shadow: 0 5px 10px rgba(241, 104, 58, 0.3);
+}
+
+/* Pseudo-element for a shimmer animation on hover */
+.btn-primary::before,
+.btn-outline-secondary::before,
+button.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-25deg);
+  transition: left 0.5s ease;
+}
+
+/* Animate the shimmer from left to right on hover */
+.btn-primary:hover::before,
+.btn-outline-secondary:hover::before,
+button.btn:hover::before {
+  left: 100%;
+}
+
+/* -------------------------------
+   Carousel Arrow Styles
+---------------------------------*/
+.arrows button {
+  width: 70px;
+  height: 70px;
+  background-color: #f1683a;
+  border: none;
+  font-size: 2.2rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              background-color 0.4s ease,
+              border-radius 0.4s ease;
+  animation: arrowFadeIn 1s ease forwards, arrowPulse 2.5s infinite;
+}
+
+/* Hover effect on arrows: scale up, rotate slightly, and enhance the glow */
+.arrows button:hover {
+  transform: scale(1.35) rotate(10deg);
+  box-shadow: 0 10px 30px rgba(241, 104, 58, 0.8);
+  background-color: #d95c37;
+}
+
+/* -------------------------------
+   Keyframes Animations
+---------------------------------*/
+/* Fade-in effect for buttons */
+@keyframes buttonFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Continuous pulse glow effect on buttons */
+@keyframes buttonPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(241, 104, 58, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(241, 104, 58, 0.8);
+  }
+}
+
+/* Fade-in effect for arrows on load */
+@keyframes arrowFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Continuous pulsing effect for arrows with subtle rotation oscillation */
+@keyframes arrowPulse {
+  0%, 100% {
+    transform: scale(1) rotate(-2deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(2deg);
+  }
+}
