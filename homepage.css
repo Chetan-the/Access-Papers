@@ -149,7 +149,7 @@ svg:hover {
 
 /* Big Text Section ("ACCESS ALL PREVIOUS") */
 .big-text {
-  font-size: 50px;
+  font-size: 45px;
   font-weight: bold;
   color: var(--accent-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -160,7 +160,7 @@ svg:hover {
 /* Using Montserrat Bold to match the "ACCESS ALL PREVIOUS" style */
 .element {
   font-family: 'Montserrat', sans-serif;
-  font-size: 50px;
+  font-size: 45px;
   font-weight: bold;
   color: var(--accent-color);
   cursor: pointer;
